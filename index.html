@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body ng-app="ourModule" ng-controller="ourController">
+        <form name='taskForm'>
+            <input type="text" ng-model="task.name" placeholder="Task"  ng-required="true">
+            <label class='importance'>Importance:</label>
+            <select  ng-model="task.importance"  ng-required="true">
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+            <input type="text" ng-model="containLetter" placeholder="Filter">
+            <button type="button" ng-click="addTask(task)"  ng-disabled="taskForm.$invalid">Add Task</button>
+        </form>
+
+        <div ng-repeat='task in taskList | filter:containLetter track by $index '>
+            <p><span class='blue'>Task: </span>{{task.name}} <span class='importance'>Importance: </span><span ng-class='task.importance'>{{task.importance}}</span> <button class="delete" ng-click="remove(task)">Delete</button></p>
+        </div>
+
+        <script type="text/javascript" src='angular.min.js'></script>
+        <script type="text/javascript" src='script.js'></script>
+    </body>
+</html>

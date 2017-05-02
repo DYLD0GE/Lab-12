@@ -1,0 +1,37 @@
+* {
+    font-family: verdana;
+    /*text-align: center;*/
+}
+body {
+    background-color: #171916;
+}
+input {
+    text-align:left;
+}
+/*EB8258 orangey*/
+/*A50018 red*/
+/*E9D985 yellow*/
+/*293F14 dark green*/
+/*color: #A8FF60; light green*/
+/*F18F01 better orange*/
+/*color: #8EB0D2; blue*/
+/*background-color: #171916;*/
+/*background-color: #373737;*/
+.blue {
+    color: #8EB0D2;
+}
+.importance {
+    color: #F18F01;
+}
+p {
+    color: #A8FF60;
+}
+.High {
+    color:#A50018;
+}
+.Medium{
+    color:#E9D985;
+}
+.Low {
+
+}
